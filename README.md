@@ -9,7 +9,7 @@ conda create -n luganda-repro python=3.9
 conda activate luganda-repro
 pip install -r requirements.txt
 
-# Step 2: Download datasets (see Data section below)
+# Step 2: Download datasets
 # Place files in ./data/ directory
 
 # Step 3: Run complete analysis
