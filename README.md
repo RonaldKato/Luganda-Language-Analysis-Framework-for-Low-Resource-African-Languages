@@ -4,18 +4,22 @@
 This repository implements a complete NLP pipeline for analyzing Luganda, a Bantu language spoken by over 16 million people in Uganda. The framework includes dataset loading, preprocessing, morphological analysis, topic modeling, and comprehensive visualizations based on ACTUAL dataset content.
 
 **Steps to Run the Luganda NLP Project**
+
 **Step 1:** Download Files
+
 bash
-git clone https://github.com/YOUR_USERNAME/luganda-nlp-visualization.git
+git clone github project
 cd luganda-nlp-visualization
 
 **Step 2: ** Install Packages
+
 bash
 pip install matplotlib numpy pandas scipy seaborn networkx wordcloud scikit-learn
 
 **Step 3:** Add Your Data
 bash
 # Create data folder and add your .txt or .csv files
+
 mkdir data
 # Copy your Luganda dataset files into the 'data' folder
 
@@ -35,10 +39,12 @@ analyzer.run_complete_analysis()
 analyzer.create_all_visualizations()
 print("Done! Check for PNG files.")
 Run it:
+
 bash
 python run.py
 
 **Step 5:** Check the Results
+
 bash
 # Open the generated PNG files
 open enhanced_luganda_analysis_1.png   # Mac
