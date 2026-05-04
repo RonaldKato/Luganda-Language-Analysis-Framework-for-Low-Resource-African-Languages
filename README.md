@@ -3,33 +3,47 @@
 
 This repository implements a complete NLP pipeline for analyzing Luganda, a Bantu language spoken by over 16 million people in Uganda. The framework includes dataset loading, preprocessing, morphological analysis, topic modeling, and comprehensive visualizations based on ACTUAL dataset content.
 
-**Execution Guide:**
-# Step 1: Setup environment
-conda create -n luganda-repro python=3.9
-conda activate luganda-repro
-pip install -r requirements.txt
+**Steps to Run the Luganda NLP Project**
+**Step 1:** Download Files
+bash
+git clone https://github.com/YOUR_USERNAME/luganda-nlp-visualization.git
+cd luganda-nlp-visualization
 
-# Step 2: Download datasets
-# Place files in ./data/ directory
+**Step 2: **Install Packages
+bash
+pip install matplotlib numpy pandas scipy seaborn networkx wordcloud scikit-learn
 
-# Step 3: Run complete analysis
-python train.py \
-    --data_path ./data/ntvbbscbsbukedde_webcrawled.txt \
-    --data_path ./data/mozillaCommonVoice_all_sentences.csv \
-    --data_path ./data/Luganda_Bible_worldProject_Webcrawled.txt \
-    --data_path ./data/Makerere_Luganda_Monolingual_Corpus.txt \
-    --output_dir ./results \
-    --generate_plots
+**Step 3:** Add Your Data
+bash
+# Create data folder and add your .txt or .csv files
+mkdir data
+# Copy your Luganda dataset files into the 'data' folder
 
-# Step 4: Run evaluation
-python eval.py \
-    --model_path ./results \
-    --test_data ./data/test_set.txt \
-    --output_file evaluation_results.json
+**Step 4:** Create & Run Script
+Save this as run.py:
 
-# Step 5: Generate result table
-python scripts/generate_results_table.py --results_dir ./results
+python
+from src.analyzer import LugandaDatasetAnalyzer
+import os
 
+# Load all files from data folder
+paths = {f: os.path.join("data", f) for f in os.listdir("data") if f.endswith(('.txt','.csv'))}
+
+# Run analysis
+analyzer = LugandaDatasetAnalyzer(paths)
+analyzer.run_complete_analysis()
+analyzer.create_all_visualizations()
+print("Done! Check for PNG files.")
+Run it:
+bash
+python run.py
+
+**Step 5:** Check the Results
+bash
+# Open the generated PNG files
+open enhanced_luganda_analysis_1.png   # Mac
+start enhanced_luganda_analysis_1.png  # Windows
+xdg-open enhanced_luganda_analysis_1.png # Linux
 
 #Acknowledgments
 Mbarara University of Science and Technology
