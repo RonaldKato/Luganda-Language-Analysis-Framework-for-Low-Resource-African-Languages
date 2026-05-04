@@ -1,0 +1,23 @@
+# Core dependencies
+numpy==1.24.3
+pandas==2.0.3
+scipy==1.10.1
+matplotlib==3.7.2
+seaborn==0.12.2
+
+# NLP & Text Processing
+scikit-learn==1.3.0
+networkx==3.1
+wordcloud==1.9.2
+nltk==3.8.1
+
+# Visualization
+plotly==5.15.0
+
+# Utilities
+tqdm==4.65.0
+pyyaml==6.0
+
+# Optional: For advanced features
+# torch==2.0.1
+# transformers==4.31.0
