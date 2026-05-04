@@ -9,7 +9,7 @@ bash
 git clone https://github.com/YOUR_USERNAME/luganda-nlp-visualization.git
 cd luganda-nlp-visualization
 
-**Step 2: **Install Packages
+**Step 2: ** Install Packages
 bash
 pip install matplotlib numpy pandas scipy seaborn networkx wordcloud scikit-learn
 
